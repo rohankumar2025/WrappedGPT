@@ -1,0 +1,188 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 2%;
+  box-shadow: 0 3px 20px black;
+}
+
+.Navbar-left {
+  display: flex;
+  align-items: first baseline;
+}
+
+.Navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar-button {
+  color: #ccc;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10%;
+  margin-left: 3%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.Navbar-button:hover {
+  font-size: 1.02rem;
+  color: white;
+}
+
+.Bar-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  scale: 1.25;
+  margin-left: 0;
+}
+
+.Navbar-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #1DB954;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}
+
+.Navbar-button:hover::after {
+  transform: scaleX(1);
+}
+
+.Navbar-button:focus {
+  outline: none;
+}
+
+.Navbar-filter-button {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold
+}
+
+.Navbar-filter-button:hover {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.Navbar-login-button {
+  background-color: #1DB954;
+  color: white;
+  border-radius: 15px;
+  padding: 8px 15px;
+  margin-right: 3%;
+  box-shadow: #1DB954, 5px, 5px, 20px;
+  text-decoration: none;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  margin-left: 15%;
+}
+
+.Navbar-login-button:hover {
+  padding: 9px 16px;
+}
+
+.loading-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #33CC33;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 5px;
+  min-width: 15px;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(0deg);
+  }
+
+  to { transform: rotate(360deg); }
+}
+
+.Navbar-dropdown {
+  position: relative;
+}
+
+.Navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  right: 0;
+  min-width: 175px;
+  background-color: #1DB954;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: thin;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Navbar-dropdown.open .Navbar-dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Navbar-dropdown-button:hover {
+  background-color: #16893e;
+}
+
+.Navbar-dropdown-button {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color:#1DB954;
+  outline: none;
+  border: none;
+  min-width: 175px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.Navbar-dropdown-checkmark {
+  margin-left: 8px; /* Adjust the margin to move the checkmark further to the right */
+  font-size: 12px; /* Adjust the font size to make the checkmark appear smaller */
+}
+
+.Navbar-button.beta {
+  position: relative;
+}
+
+.beta-subtext {
+  position: absolute;
+  top: -10px;
+  right: -4px;
+  font-size: 10px;
+  color: #FFFFFF;
+  background-color: #1DB954;
+  padding: 2px 4px;
+  border-radius: 4px;
+}

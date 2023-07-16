@@ -1,0 +1,67 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+
+.Login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1504509546545-e000b4a62425?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  filter: brightness(50%);
+}
+
+.Login-container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.Login-title {
+  font-size: 10vw;
+  margin-bottom: 5%;
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Login-button {
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  border-radius: 1.5vw;
+  padding: 1.5vw 1.5vw;
+  font-size: 2vw;
+  font-weight: thin;
+  box-shadow: green, 5px, 5px, 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.Login-button:hover {
+  background-color: #16893e;
+}
+
+@media (min-width: 601px) {
+  .Login-title {
+    font-size: 8vw;
+  }
+
+  .Login-button {
+    font-size: 1vw;
+    padding: 0.75vw 1vw;
+  }
+}
